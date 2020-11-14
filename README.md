@@ -1,28 +1,28 @@
 # Attendee Detector Workshop
 
-This workshop shows how to build a web app using [Python](https://www.python.org) and [Flask](http://flask.pocoo.org) running on [Microsoft Azure](https://azure.microsoft.com/free/students/?WT.mc_id=pythonworkshop-github-jabenn) that takes images from a desktop app, analyses them for faces using AI and stores information about the age and emotion of any faces in the image, along with if anyone is smiling. The web app also serves up a simple page showing the data captured.
+This workshop shows how to build a web app using [Python](https://www.python.org) and [Flask](http://flask.pocoo.org) running on [Microsoft Azure](https://azure.microsoft.com/free/students/?WT.mc_id=academic-0000-jabenn) that takes images from a desktop app, analyses them for faces using AI and stores information about the age and emotion of any faces in the image, along with if anyone is smiling. The web app also serves up a simple page showing the data captured.
 
-This workshop is designed for students, and can be run using the free services available as part of the [Azure for students](https://azure.microsoft.com/free/students/?WT.mc_id=pythonworkshop-github-jabenn) offer.
+This workshop is designed for students, and can be run using the free services available as part of the [Azure for students](https://azure.microsoft.com/free/students/?WT.mc_id=academic-0000-jabenn) offer.
 
 ## Prerequisites
 
 To complete this workshop, you will need:
 
-* An Azure account. Sign up for free using [Azure for students](https://azure.microsoft.com/free/students/?WT.mc_id=pythonworkshop-github-jabenn), or the [Azure free account](https://azure.microsoft.com/free/?WT.mc_id=pythonworkshop-github-jabenn) if you are not at an academic institution.
+* An Azure account. Sign up for free using [Azure for students](https://azure.microsoft.com/free/students/?WT.mc_id=academic-0000-jabenn), or the [Azure free account](https://azure.microsoft.com/free/?WT.mc_id=academic-0000-jabenn) if you are not at an academic institution.
 * [Python 3](https://www.python.org/downloads/).
   
   > If you are using Windows you will need to restart your machine after installing to ensure you can use Python and Pip from the command line.
 
-* [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=pythonworkshop-github-jabenn)
-* The [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python&WT.mc_id=pythonworkshop-github-jabenn). This can be installed from inside VS Code using the *Extensions* tab.
+* [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-0000-jabenn)
+* The [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python&WT.mc_id=academic-0000-jabenn). This can be installed from inside VS Code using the *Extensions* tab.
   
   ![The Python extension in Visual Studio Code](./Images/PythonExtension.png)
 
-* The [Azure App Service Extension for Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=ms-azuretools.vscode-azureappservice&WT.mc_id=pythonworkshop-github-jabenn). This can be installed from inside VS Code using the *Extensions* tab.
+* The [Azure App Service Extension for Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=ms-azuretools.vscode-azureappservice&WT.mc_id=academic-0000-jabenn). This can be installed from inside VS Code using the *Extensions* tab.
   
   ![The Azure App Service extension in Visual Studio Code](./Images/AppServiceExtension.png)
 
-* The [Azure Cosmos DB Extension for Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=ms-azuretools.vscode-cosmosdb&WT.mc_id=pythonworkshop-github-jabenn). This can be installed from inside VS Code using the *Extensions* tab.
+* The [Azure Cosmos DB Extension for Visual Studio Code](https://marketplace.visualstudio.com/itemdetails?itemName=ms-azuretools.vscode-cosmosdb&WT.mc_id=academic-0000-jabenn). This can be installed from inside VS Code using the *Extensions* tab.
   
   ![The Cosmos DB extension in Visual Studio Code](./Images/CosmosExtension.png)
 
@@ -36,7 +36,7 @@ This workshop works on MacOS and Windows.
 
 The attendee detector is a Python app. It uses a library called [OpenCV](https://opencv.org) which is accessible from Python to access the Web Cam and take a picture. Once a picture has been taken, this app will send it to a Web Api built in Python, using a framework called [Flask](http://flask.pocoo.org) and running in the cloud. This is a special type of web site address that doesn't return a web page, but instead allows you to send and receive data.
 
-The Web Api will take the picture, and analyze it using the [Azure Face Api](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=pythonworkshop-github-jabenn) from [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=pythonworkshop-github-jabenn). This is an AI service that can recognize faces in images, as well as estimating the age of the face, if the person is smiling amongst other things. The Web Api will use this service to detect the age and emotion of all the faces and if they are smiling. This will then be saved into a database called [CosmosDB](https://azure.microsoft.com/services/cosmos-db/?WT.mc_id=pythonworkshop-github-jabenn). This is a document database - instead of storing data in rows and columns in tables, it stored data as documents. These documents contain key/value pairs of data stored in a format called [JSON](https://www.json.org).
+The Web Api will take the picture, and analyze it using the [Azure Face Api](https://azure.microsoft.com/services/cognitive-services/face/?WT.mc_id=academic-0000-jabenn) from [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/?WT.mc_id=academic-0000-jabenn). This is an AI service that can recognize faces in images, as well as estimating the age of the face, if the person is smiling amongst other things. The Web Api will use this service to detect the age and emotion of all the faces and if they are smiling. This will then be saved into a database called [CosmosDB](https://azure.microsoft.com/services/cosmos-db/?WT.mc_id=academic-0000-jabenn). This is a document database - instead of storing data in rows and columns in tables, it stored data as documents. These documents contain key/value pairs of data stored in a format called [JSON](https://www.json.org).
 
 The Web Api will then have a web site added. This web site will load all the data from CosmosDB and show it in a simple HTML table, showing all details from all faces captured.
 
@@ -80,4 +80,4 @@ For reference, you can find the final code for this workshop in the [Code](./Cod
 
 ## Clean up Azure resources
 
-This workshop uses resources that are available in the [Azure for Students account as free services](https://azure.microsoft.com/en-us/free/free-account-students-faq/). As there are limits on the number of free services you can create, you may want to delete the resources created once you are done. The instructions to do this are in the last step - [Clean up](./Steps/CleanUp.md).
+This workshop uses resources that are available in the [Azure for Students account as free services](https://azure.microsoft.com/free/free-account-students-faq/?WT.mc_id=academic-0000-jabenn). As there are limits on the number of free services you can create, you may want to delete the resources created once you are done. The instructions to do this are in the last step - [Clean up](./Steps/CleanUp.md).
